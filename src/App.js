@@ -6,12 +6,19 @@ import Experience from "./components/skills/Skills";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import {  ParticlesOptions } from "./components/particles/Particles";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 
 function App() {
+  const particlesInit = (engine) => {
+    loadFull(engine);
+  };
   return (
     <div>
       <>
+      <Particles init={particlesInit} options={ParticlesOptions} />
         <Header />
         <Nav />
         <About />
@@ -19,6 +26,7 @@ function App() {
         <Portfolio />
         <Contact />
         <Footer />
+        
       
       </>
     </div>

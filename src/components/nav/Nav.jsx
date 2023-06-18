@@ -1,10 +1,8 @@
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiBook } from "react-icons/bi";
+import React, { useState } from "react";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { BiMessageSquareDetail } from "react-icons/bi";
 import "./nav.css";
-import { useState } from "react";
 
 function Nav() {
   const [active, setActive] = useState("#");
@@ -13,38 +11,47 @@ function Nav() {
     <nav>
       <a
         onClick={() => setActive("#")}
-        className={active === "#" ? "active" : ""}
+        className={active === "#" ? "active hover-effect" : "hover-effect"}
         href="#home"
       >
         <AiOutlineHome />
+        <span className="text">HOME</span>
       </a>
       <a
         onClick={() => setActive("#about")}
-        className={active === "#about" ? "active" : ""}
+        className={active === "#about" ? "active hover-effect" : "hover-effect"}
         href="#about"
       >
         <AiOutlineUser />
+        <span className="text">ABOUT</span>
       </a>
       <a
         onClick={() => setActive("#experience")}
-        className={active === "#experience" ? "active" : ""}
+        className={
+          active === "#experience" ? "active hover-effect" : "hover-effect"
+        }
         href="#experience"
       >
         <BiBook />
+        <span className="text">SKILLS</span>
       </a>
       <a
         onClick={() => setActive("#portfolio")}
-        className={active === "#portfolio" ? "active" : ""}
+        className={
+          active === "#portfolio" ? "active hover-effect" : "hover-effect"
+        }
         href="#portfolio"
       >
         <RiServiceLine />
+        <span className="text">PORTFOLIO</span>
       </a>
       <a
         onClick={() => setActive("#contact")}
-        className={active === "#contact" ? "active" : ""}
+        className={active === "#contact" ? "active hover-effect" : "hover-effect"}
         href="#contact"
       >
         <BiMessageSquareDetail />
+        <span className="text">CONTACT</span>
       </a>
     </nav>
   );

@@ -26,4 +26,31 @@ nav a:hover {
 nav a.active {
   background: var(--color-primary);
   color: var(--color-bg);
+  
 }
+
+
+
+.hover-effect {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: small;
+}
+
+.hover-effect:hover .text {
+  opacity: 1;
+  margin-top: 30%;
+  
+}
+
+
+
+
